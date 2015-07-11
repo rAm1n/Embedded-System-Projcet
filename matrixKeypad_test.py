@@ -14,8 +14,8 @@
 #
 # #####################################################
 
-from matrixKeypad_MCP230xx import keypad
-#from matrixKeypad_RPi_GPIO import keypad
+#from matrixKeypad_MCP230xx import keypad
+from matrixKeypad_RPi_GPIO import keypad
 from time import sleep
 
 # Initialize the keypad class

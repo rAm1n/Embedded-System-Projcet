@@ -21,14 +21,14 @@ import RPi.GPIO as GPIO
 class keypad():
     # CONSTANTS   
     KEYPAD = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-    ["*",0,"#"]
+    [1,2,3,'A'],
+    [4,5,6,'B'],
+    [7,8,9,'C'],
+    ["*",0,"#",'D']
     ]
     
-    ROW         = [18,23,24,25]
-    COLUMN      = [4,17,22]
+    ROW         = [4, 17, 27, 26]
+    COLUMN      = [22, 6, 13, 19]
     
     def __init__(self):
         GPIO.setmode(GPIO.BCM)
