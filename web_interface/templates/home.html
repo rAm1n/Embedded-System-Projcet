@@ -1,8 +1,24 @@
 {% extends "layout.html" %}
 {% block body %}
   {% if session.logged_in %}
-    <p>Logged in</p>
-  {% else %}
-    <em>Unbelievable.  No entries here so far</em>
+  <form action="{{ url_for('lights') }}" method=post>
+    <dl>
+      <dt>Red Light:
+      <dd><input type=checkbox name=red>
+      <dt>Green Light:
+      <dd><input type=checkbox name=green>
+      <dt>Blue Light:
+      <dd><input type=checkbox name=blue>
+      <dd><input type=submit name=submit>
+    </dl>
+  </form>  
+
+  <form action="{{ url_for('message') }}" method=post>
+    <dl>
+      <dt>Message:
+      <dd><input type=text name=msg>
+      <dd><input type=submit name=submit>
+    </dl>
+  </form>  
   {% endif %}
 {% endblock %}
