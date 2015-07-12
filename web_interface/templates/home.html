@@ -20,5 +20,12 @@
       <dd><input type=submit name=submit>
     </dl>
   </form>  
-  {% endif %}
+
+  <form action="{{ url_for('door') }}" method=post>
+    <dl>
+      <dt>Unlock Door: <input type=checkbox name=door>
+      <dd><input type=submit name=submit>
+    </dl>
+  </form>  
+   {% endif %}
 {% endblock %}

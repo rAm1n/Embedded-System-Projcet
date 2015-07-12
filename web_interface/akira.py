@@ -4,9 +4,9 @@ from flask import Flask, request, session, \
                   redirect, url_for, render_template, flash
 from contextlib import closing
 
-#import control
+import control
 
-#control.init_board()
+control.init_board()
 
 # configuration
 DEBUG = True
@@ -58,6 +58,12 @@ def lights():
 def message():
   if request.form['msg']:
     lcd.message(request.form['msg'])
+  return redirect(url_for('home'))
+
+@app.route('/door', methods=['POST'])
+def door():
+  if request.form['door'] == 'on':  lcd.message("door is open now")
+  else:                             lcd.message("door is closed")
   return redirect(url_for('home'))
 
 if __name__ == "__main__":
