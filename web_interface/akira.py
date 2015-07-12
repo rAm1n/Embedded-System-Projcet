@@ -4,9 +4,9 @@ from flask import Flask, request, session, \
                   redirect, url_for, render_template, flash
 from contextlib import closing
 
-import control
+from control import *
 
-control.init_board()
+init_board()
 
 # configuration
 DEBUG = True
@@ -67,4 +67,4 @@ def door():
   return redirect(url_for('home'))
 
 if __name__ == "__main__":
-  app.run()
+  app.run('0.0.0.0',8800)

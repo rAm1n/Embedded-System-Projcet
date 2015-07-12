@@ -6,7 +6,7 @@ import threading
 
 import RPi.GPIO as GPIO
 from matrixKeypad_RPi_GPIO import keypad
-from Adafruit.Adafruit_CharLCD import Adafruit_CharLCD
+from Adafruit_CharLCD import *
 
 # GPIO BCM Mode I/O pins number
 # LEDs
